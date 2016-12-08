@@ -1,0 +1,62 @@
+/*review*/
+* {
+  box-sizing: border-box;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+[class*="col-"] {
+  padding: 15px;
+  float: left;
+}
+.col-1 {
+  width: 25%;
+}
+.col-2 {
+  width: 50%;
+}
+.col-3 {
+  width: 75%;
+}
+.col-4 {
+  width: 100%;
+}
+
+/*Nav*/
+#nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #ccc;
+  padding: 0px;
+  margin: 0px;
+}
+#nav li {
+  float:left;
+}
+#nav li a {
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+  display: block;
+  color: #333;
+  font-family: tahoma;
+  text-transform: uppercase;
+  font-size: 130%;
+}
+#nav ul li a.active {
+  color: #ccc;
+  background-color: #999;
+}
+#nav li a:hover:not(.active) {
+  color: #aaa;
+}
+@media only screen and (max-width: 760px) { /*allows for mobile view*/
+   [class*="col-"] {
+     width: 100%;
+   }
+   #nav li {
+     float: none; /*this is what causes the nav bar to be vertical in mobile view*/
+   }
+ }
